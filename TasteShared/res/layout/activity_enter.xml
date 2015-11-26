@@ -1,0 +1,170 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EnterActivity" >
+
+    <RelativeLayout
+        android:id="@+id/EnterTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#aaaaaa" />
+
+        <Button
+            android:id="@+id/EnterBack"
+            android:layout_width="65.0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="@null"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="#959595"
+            android:textSize="13.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/EnterBefore"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/EnterTitle"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="40.0dp"
+            android:layout_marginRight="40.0dp"
+            android:layout_marginTop="50.0dp" >
+
+            <EditText
+                android:id="@+id/EnterEditPhone"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10.0dp"
+                android:layout_marginTop="10.0dp"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="请输入电话号码"
+                android:textColorHint="#c9c9c9"
+                android:textSize="15.0sp" >
+
+                <requestFocus />
+            </EditText>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/EnterSendPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50.0dp"
+            android:background="@null"
+            android:text="发送验证码"
+            android:textColor="#535353"
+            android:textSize="15.0sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/EnterAfter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/EnterTitle"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50.0dp" >
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="40.0dp"
+                android:text="已经向"
+                android:textColor="#535353"
+                android:textSize="13.0sp" />
+
+            <TextView
+                android:id="@+id/EnterCustomerPhone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView2"
+                android:layout_alignBottom="@+id/textView2"
+                android:layout_marginLeft="5.0dp"
+                android:layout_toRightOf="@+id/textView2"
+                android:text="18059866229"
+                android:textColor="#88d4cc"
+                android:textSize="20.0sp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/EnterCustomerPhone"
+                android:layout_marginLeft="5.0dp"
+                android:layout_toRightOf="@+id/EnterCustomerPhone"
+                android:text="发送验证码"
+                android:textColor="#535353"
+                android:textSize="13.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50.0dp"
+            android:layout_below="@+id/relativeLayout2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="40.0dp"
+            android:layout_marginRight="40.0dp" >
+
+            <EditText
+                android:id="@+id/EnterEditCode"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="10.0dp"
+                android:layout_marginTop="10.0dp"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="请输入验证码"
+                android:textColorHint="#c9c9c9"
+                android:textSize="15.0sp" />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/EnterSendCode"
+            android:layout_width="100.0dp"
+            android:layout_height="80.0dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:text="验证"
+            android:textColor="#535353"
+            android:textSize="15.0sp" />
+    </RelativeLayout>
+
+</RelativeLayout>
