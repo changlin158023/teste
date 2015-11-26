@@ -173,7 +173,10 @@ public class SlidingActivity extends Activity implements OnClickListener,OnItemC
 
 			@Override
 			public void success(String A) {
+<<<<<<< HEAD
 				Group_Readalluser_List.clear();
+=======
+>>>>>>> refs/remotes/origin/zzy
 				Group_ReadAllUserback group_ReadAllUserback = GsonUtils.parseJson(A, Group_ReadAllUserback.class);
 				int status = group_ReadAllUserback.getStatusMsg();
 				if (status == 1) {
@@ -196,6 +199,10 @@ public class SlidingActivity extends Activity implements OnClickListener,OnItemC
 			}
 		});
 	}
+<<<<<<< HEAD
+=======
+
+>>>>>>> refs/remotes/origin/zzy
 	private void initSlidingMenuUI() {
 		mSlidingMenu_Team_Setting = (RelativeLayout) findViewById(R.id.SlidingMenu_Team_Setting);
 		mSlidingMenu_Team_Setting.setOnClickListener(this);// 跳转至小组设置

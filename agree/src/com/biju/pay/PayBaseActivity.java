@@ -38,6 +38,10 @@ import android.util.Log;
 import android.util.Xml;
 import android.view.Gravity;
 import android.view.KeyEvent;
+<<<<<<< HEAD
+=======
+import android.view.Menu;
+>>>>>>> refs/remotes/origin/zzy
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -154,8 +158,13 @@ public class PayBaseActivity extends Activity implements OnClickListener,Callbac
 		}
 		
 		mPaymount = intent.getFloatExtra(IConstant.Paymount, 0);
+<<<<<<< HEAD
 		mWeChatPayMount = (int) (mPaymount*100);// 微信支付金额// 测试完要*100，单位是分
 		mAliPayMount = String.valueOf(mPaymount);// 支付宝金额//测试完要把除100去掉
+=======
+		mWeChatPayMount = (int) (mPaymount);// 微信支付金额// 测试完要*100，单位是分
+		mAliPayMount = String.valueOf(mPaymount/100);// 支付宝金额//测试完要把除100去掉
+>>>>>>> refs/remotes/origin/zzy
 		mUnionPayMount = mPaymount;
 		mPayName = intent.getStringExtra(IConstant.Payname);
 		initUI();
