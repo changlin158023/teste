@@ -1,0 +1,183 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TimeActivity" >
+
+    <RelativeLayout
+        android:id="@+id/Time_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" 
+        android:background="@drawable/title_background"
+        >
+
+        <RelativeLayout
+            android:id="@+id/Time_back_layout"
+            android:layout_width="@dimen/title_left_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/Time_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/time_title_left"
+                android:textColor="@drawable/title_left_color"
+                android:textSize="@dimen/title_left_size" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/time_title_text"
+            android:textSize="@dimen/title_size" />
+
+        <RelativeLayout
+            android:id="@+id/Time_OK_layout"
+            android:layout_width="@dimen/title_right_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/Time_OK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/time_title_right"
+                android:textColor="@drawable/title_right_color"
+                android:textSize="@dimen/title_right_size" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#aaaaaa" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/ datePicker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Time_title_layout"
+        android:layout_centerHorizontal="true" >
+
+        <LinearLayout
+            android:id="@+id/ll_popup"
+            android:layout_width="match_parent"
+            android:layout_height="300.0dp"
+            android:background="#ffeeeeee"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/popupwindow_calendar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                 >
+
+                <RelativeLayout
+                    android:id="@+id/popupwindow_calendar_last_month"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@+id/popupwindow_calendar_month" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="20dp"
+                        android:background="@drawable/bt_calendar_last" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/popupwindow_calendar_month"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:textColor="#aa564b4b"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/popupwindow_calendar_next_month"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/popupwindow_calendar_month" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20dp"
+                        android:background="@drawable/bt_calendar_next" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <com.BJ.utils.KCalendar
+                android:id="@+id/popupwindow_calendar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 android:layout_below="@+id/popupwindow_calendar_layout"
+                 >
+            </com.BJ.utils.KCalendar>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#bbcc3333" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/TimePicker_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TimePicker_Time_text"
+        android:layout_centerHorizontal="true"
+         >
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/TimePicker_Time_text"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dp"
+        android:layout_below="@+id/ datePicker_layout"
+        android:layout_centerHorizontal="true"
+        android:background="#c9c9c9" >
+
+        <TextView
+            android:id="@+id/TimePicker_Time_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/time_prompt"
+            android:textColor="#535353"
+            android:textSize="13.0sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

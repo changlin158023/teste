@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 
-import com.tasteshared.MainActivity;
 import com.tasteshared.R;
 
 public class LoginActivity extends Activity implements OnClickListener{
@@ -44,7 +43,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 	}
 
 	private void Loginlogin() {
-		Intent intent=new Intent(LoginActivity.this, MainActivity.class);
+		Intent intent=new Intent(LoginActivity.this, EnterActivity.class);
 		startActivity(intent);
 		overridePendingTransition(R.anim.in_item, R.anim.out_item);
 	}

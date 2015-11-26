@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NicknameActivity" >
+
+    <RelativeLayout
+        android:id="@+id/Nickname_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/title_height"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" 
+        android:background="@drawable/title_background"
+        >
+
+        <RelativeLayout
+            android:id="@+id/Nickname_back_layout"
+            android:layout_width="@dimen/title_left_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+             >
+
+            <TextView
+                android:id="@+id/Nickname_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/nickname_title_left"
+                android:textColor="@drawable/title_left_color"
+                android:textSize="@dimen/title_left_size" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Nickname_OK_layout"
+            android:layout_width="@dimen/title_right_width"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/Nickname_OK"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="@string/nickname_title_right"
+                android:textColor="@drawable/title_right_color"
+                android:textSize="@dimen/title_right_size" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#aaaaaa" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Nickname_title_layout"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/background" >
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="60.0dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="20.0dp"
+                android:layout_marginTop="35.0dp"
+                android:text="@string/nickname_prompt"
+                android:textColor="#808080"
+                android:textSize="13.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Nickname_nickname_layout"
+            android:layout_width="match_parent"
+            android:layout_height="50.0dp"
+            android:layout_below="@+id/relativeLayout1"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff" >
+
+            <EditText
+                android:id="@+id/Nickname_nickname"
+                android:layout_width="match_parent"
+                android:layout_height="40.0dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20.0dp"
+                android:layout_marginRight="20.0dp"
+                android:background="@null"
+                android:ems="10"
+                android:gravity="left|center"
+                android:hint="@string/nickname_hint"
+                android:textSize="15.0sp" 
+                android:textColorHint="#c9c9c9"
+                android:textColor="#000000"
+                >
+
+                <requestFocus />
+            </EditText>
+
+            <RelativeLayout
+                android:id="@+id/Nickname_warn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/Nickname_nickname"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:layout_width="15.0dp"
+                    android:layout_height="15.0dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/warn1" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/imageView1"
+                    android:layout_marginLeft="5.0dp"
+                    android:layout_toRightOf="@+id/imageView1"
+                    android:text="@string/nickname_prompt_1"
+                    android:textColor="#ff0000"
+                    android:textSize="9.0sp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100.0dp"
+            android:layout_below="@+id/Nickname_nickname_layout"
+            android:layout_centerHorizontal="true" >
+
+            <TextView
+                android:id="@+id/Nickname_prompt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="10.0dp"
+                android:text="@string/nickname_prompt_2"
+                android:textColor="#808080"
+                android:textSize="13.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

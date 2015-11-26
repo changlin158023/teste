@@ -18,6 +18,7 @@ public class EnterActivity extends Activity implements OnClickListener{
 	private RelativeLayout mEnterAfter;
 	private TextView mEnterCustomerPhone;
 	private EditText mEnterEditCode;
+	private EditText mEnterEditPassword;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +37,7 @@ public class EnterActivity extends Activity implements OnClickListener{
 		mEnterAfter = (RelativeLayout) findViewById(R.id.EnterAfter);//输入电话号码之后布局
 		mEnterCustomerPhone = (TextView) findViewById(R.id.EnterCustomerPhone);//显示客户的电话号码
 		mEnterEditCode = (EditText) findViewById(R.id.EnterEditCode);//输入验证码
+		mEnterEditPassword = (EditText) findViewById(R.id.EnterEditPassword);//输入密码
 	}
 
 	@Override
@@ -44,10 +46,16 @@ public class EnterActivity extends Activity implements OnClickListener{
 		case R.id.EnterBack:
 			EnterBack();
 			break;
-
+		case R.id.EnterSendPhone:
+			EnterSendPhone();
+			break;
 		default:
 			break;
 		}
+	}
+
+	private void EnterSendPhone() {
+		
 	}
 
 	private void EnterBack() {

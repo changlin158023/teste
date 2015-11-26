@@ -15,7 +15,6 @@ import com.tasteshared.fragment.GoodsFragment;
 
 public class MainActivity extends FragmentActivity {
 
-	//hi说的话覅啊是的还
 	private FragmentTabHost mTabhost;
 	private int tab_imagelist[] = new int[] { R.drawable.tab_tag_selector,
 			R.drawable.tab_tag_selector};

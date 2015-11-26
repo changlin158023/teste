@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <drawable name="moregray">#cdcdcd</drawable>
+    <drawable name="gray">#f0f0f0</drawable>
+    <drawable name="white">#ffffff</drawable>
+    <drawable name="eewhite">#eeffffff</drawable>
+    <drawable name="view_light">#fcfcfc</drawable>
+    <drawable name="black">#000000</drawable>
+    
+
+    <!-- 头部标题底部颜色 -->
+    <drawable name="title_background">#ffffff</drawable>
+
+    <!-- 头部标题字体颜色 -->
+    <drawable name="title_text_color">#535353</drawable><!-- 头部左边字体颜色 -->
+    <drawable name="title_left_color">#959595</drawable><!-- 头部左边字体颜色 -->
+    <drawable name="title_right_color">#88d4cc</drawable><!-- 头部右边字体颜色 -->
+
+
+    <!-- 界面背景颜色 -->
+    <drawable name="background">#efefef</drawable>
+    <drawable name="listview_background">#ffffff</drawable>
+
+
+    <!-- 设置选项的字体颜色 -->
+    <drawable name="setting_prompt_color">#959595</drawable>
+    <drawable name="setting_content_color">#535353</drawable>
+
+
+    <!-- CommonFragmnet -->
+    <drawable name="Common_text_color_green">#88d4cc</drawable>
+    <drawable name="Common_text_color_gray">#959595</drawable>
+
+    <!-- PartyFragment --><!--535353  -->
+    <drawable name="Party_partake_address_color">#737373</drawable><!--参与后地址颜色深灰  -->
+    <drawable name="Party_notpartake_address_color">#c9c9c9</drawable><!--未参与后地址颜色浅灰  -->
+    <drawable name="Party_notpartake_nickname_color">#737373</drawable><!--未参与后名称颜色深灰  -->
+    <drawable name="Party_partake_nickname_color">#000000</drawable><!--参与后名称颜色深灰  -->
+    <drawable name="Party_partake_pay_color">#88d4cc</drawable><!--参与后付款方式颜色绿色  -->
+    
+    <!-- PartyDetails -->
+    <drawable name="PartyDetails_apply_layout_color">#88d4cc</drawable><!--已报名  -->
+    <drawable name="PartyDetails_noapply_layout_color">#f0f0f0</drawable><!--已报名  -->
+    <drawable name="PartyDetails_name_color">#88d4cc</drawable>
+    <drawable name="PartyDetails_number_color">#88d4cc</drawable>
+    
+    <!--修改界面  -->
+    <drawable name="sex_choose_color">#d9d9d9</drawable>
+    <!-- 侧滑界面 -->
+     <drawable name="Sliding_choose_color">#d9d9d9</drawable>
+     <!--支付界面  -->
+     <drawable name="CostChooseColor">#d9d9d9</drawable>
+     
+     <!--设置图文信息字体颜色  -->
+     <drawable name="EditTextLightGrayColor">#C4C4C4</drawable>
+     <drawable name="EditTextDarkGrayColor">#43434C</drawable>
+     <drawable name="EditTextBlackColor">#040404</drawable>
+     <drawable name="EditTextRedColor">#B6000A</drawable>
+     <drawable name="EditTextBlueColor">#2B61D5</drawable>
+     <drawable name="EditTextGreenColor">#6FCE1B</drawable>
+     
+     <!--button点击效果颜色  -->
+      <drawable name="but_white">#ffffff</drawable>
+      <drawable name="but_lightblack">#d9d9d9</drawable>
+      <drawable name="GroupBackground">#cc000000</drawable>
+      
+      <!-- 聚会列表参与时背景颜色为白色 -->
+      <drawable name="party_partake_background">#ffffff</drawable>
+</resources>
