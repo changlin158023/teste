@@ -1,16 +1,15 @@
 package com.tasteshared.login;
 
-import com.tasteshared.R;
-
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.tasteshared.R;
 
 public class EnterActivity extends Activity implements OnClickListener{
 
