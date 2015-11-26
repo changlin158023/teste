@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#efefef"
+    tools:context=".GraphicPreviewActivity" >
+
+    <RelativeLayout
+        android:id="@+id/GraphicPreviewTitleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff" >
+
+        <TextView
+            android:id="@+id/GraphicPreviewBack"
+            android:layout_width="65.0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="返回"
+            android:textColor="@drawable/title_left_color"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#aaaaaa" />
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/GraphicPreviewListView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/GraphicPreviewTitleLayout"
+        android:background="#ffffff" >
+    </ListView>
+
+</RelativeLayout>

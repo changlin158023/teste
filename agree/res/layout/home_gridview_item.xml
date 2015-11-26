@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ImageView
+        android:id="@+id/home_item_head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/newteam"
+        android:scaleType="fitXY" />
+    <!--
+              android:layout_marginLeft="10.0dp"
+      		android:layout_marginTop="10.0dp"
+    -->
+
+    <RelativeLayout
+        android:id="@+id/home_item_name_layout"
+        android:layout_width="match_parent"
+        android:layout_height="40.0dp"
+        android:layout_alignBottom="@+id/home_item_head"
+        android:layout_alignLeft="@+id/home_item_head"
+        android:layout_alignRight="@+id/home_item_head"
+        android:background="@drawable/home_text_corners" >
+
+        <TextView
+            android:id="@+id/home_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="13.0sp" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="match_parent"
+            android:layout_height="2.0dp"
+            android:layout_alignParentTop="true"
+            android:background="#88d4cc" />
+    </RelativeLayout>
+
+</RelativeLayout>

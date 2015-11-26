@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80.0dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="#ffffff"
+         >
+
+        <TextView
+            android:id="@+id/Party_item_prompt_1"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#aaaaaa"
+            android:layout_marginLeft="20.0dp"
+             />
+        <TextView
+            android:id="@+id/Party_item_prompt_2"
+            android:layout_width="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_alignParentBottom="true"
+            android:background="#aaaaaa"
+            android:visibility="gone"
+             />
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout1"
+            android:layout_width="100.0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true" >
+
+            <RelativeLayout
+                android:id="@+id/Party_item_background"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20.0dp"
+                 >
+<!--android:background="@drawable/party_green_corners"  -->
+                <TextView
+                    android:id="@+id/Party_item_years_month"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginRight="5.0dp"
+                    android:gravity="right|bottom"
+                    android:text="9月10号"
+                    android:layout_marginTop="3.0dp"
+                    android:textColor="#ffffff"
+                    android:textSize="16.0sp" />
+
+                <TextView
+                    android:id="@+id/Party_item_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/Party_item_years_month"
+                    android:layout_below="@+id/Party_item_years_month"
+                    android:layout_marginBottom="3.0dp"
+                    android:gravity="right|top"
+                    android:text="20:00"
+                    android:textColor="#ffffff"
+                    android:textSize="18.0sp" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true" >
+
+                    <ImageView
+                        android:id="@+id/Party_item_redprompt"
+                        android:layout_width="10.0dp"
+                        android:layout_height="10.0dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/red_yuan"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Party_item_message_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="70.0dp"
+            android:layout_toRightOf="@+id/relativeLayout1" >
+
+            <TextView
+                android:id="@+id/Party_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="18.0dp"
+                android:gravity="left|bottom"
+                android:singleLine="true"
+                android:text="聚会名称"
+                android:paddingLeft="5.0dp"
+                android:textSize="23.0sp" />
+
+            <TextView
+                android:id="@+id/Party_item_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/Party_item_name"
+                android:singleLine="true"
+                android:text="聚会地点"
+                android:gravity="left|top"
+                android:paddingLeft="5.0dp"
+                android:textSize="10.0sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="50.0dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20.0dp"
+             >
+
+            <TextView
+                android:id="@+id/Party_item_payment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20.0dp"
+                android:text="预付款"
+                android:textColor="#808080"
+                android:textSize="12.0sp" />
+
+            <TextView
+                android:id="@+id/Party_item_inNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Party_item_payment"
+                android:layout_centerHorizontal="true"
+                android:text="1"
+                android:textSize="16.0sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
