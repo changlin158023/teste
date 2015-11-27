@@ -46,6 +46,7 @@ public class LoginActivity extends Activity implements OnClickListener{
 		Intent intent=new Intent(LoginActivity.this, EnterActivity.class);
 		startActivity(intent);
 		overridePendingTransition(R.anim.in_item, R.anim.out_item);
+		finish();
 	}
 
 }

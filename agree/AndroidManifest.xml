@@ -168,11 +168,7 @@
         <!-- 百度签名 -->
         <meta-data
             android:name="com.baidu.lbsapi.API_KEY"
-<<<<<<< HEAD
             android:value="am4a3xRjopFOrnHsDW7nnlb4" />
-=======
-            android:value="yGkNOAGTinoQq0oFRuksvUIi" />
->>>>>>> refs/remotes/origin/zzy
         <!-- 百度签名 -->
         <activity
             android:name="com.biju.MainActivity"
@@ -602,13 +598,9 @@
         </activity>
         <activity
             android:name="com.biju.function.AddTeamFriendsActivity"
-<<<<<<< HEAD
             android:label="@string/title_activity_add_team_friends" 
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             >
-=======
-            android:label="@string/title_activity_add_team_friends" >
->>>>>>> refs/remotes/origin/zzy
         </activity>
     </application>
 

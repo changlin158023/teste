@@ -1,8 +1,8 @@
 # cache for current jar dependency. DO NOT EDIT.
 # format is <lastModified> <length> <SHA-1> <path>
 # Encoding is UTF-8
-1439794968000 222710 a32e48b24fe3fe9fa8ae1cb8345b8db9a050df0f C:\Users\pan\Desktop\teste\lib_BaiduLocDemo\libs\locSDK_5.02.jar
-1439794968000 222710 a32e48b24fe3fe9fa8ae1cb8345b8db9a050df0f C:\Users\pan\Desktop\teste\lib_baidumap\libs\locSDK_5.02.jar
-1442395217609 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 C:\Users\pan\Desktop\teste\lib_photoView\libs\android-support-v4.jar
-1439794968000 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 C:\Users\pan\Desktop\teste\lib_BaiduLocDemo\libs\android-support-v4.jar
+1448531002730 222710 a32e48b24fe3fe9fa8ae1cb8345b8db9a050df0f C:\Users\pan\Desktop\teste\lib_BaiduLocDemo\libs\locSDK_5.02.jar
+1448531003196 222710 a32e48b24fe3fe9fa8ae1cb8345b8db9a050df0f C:\Users\pan\Desktop\teste\lib_baidumap\libs\locSDK_5.02.jar
+1448531003244 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 C:\Users\pan\Desktop\teste\lib_photoView\libs\android-support-v4.jar
+1448531002724 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 C:\Users\pan\Desktop\teste\lib_BaiduLocDemo\libs\android-support-v4.jar
 1439794968000 995624 3e4e879d0b3dc11f2feb3f55e77e3b5bd82c4a28 C:\Users\pan\Desktop\teste\agree\libs\android-support-v4.jar

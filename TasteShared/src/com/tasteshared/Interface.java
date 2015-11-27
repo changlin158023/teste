@@ -17,7 +17,7 @@ import android.util.Log;
 
 public class Interface {
 
-	String url = "http://120.26.118.226/app/app_interface/sr_interface.php";
+	String url = "http://120.26.118.226/app/teste/te_interface.php";
 
 	private static Interface Thisinterface = new Interface();
 

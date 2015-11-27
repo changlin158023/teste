@@ -92,7 +92,7 @@
                 android:background="#aaaaaa" />
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/GoodsDetailsUserName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -120,7 +120,7 @@
                 android:background="#aaaaaa" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/GoodsDetailsUserPhone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -148,7 +148,7 @@
                 android:background="#aaaaaa" />
 
             <TextView
-                android:id="@+id/textView12"
+                android:id="@+id/GoodsDetailsUserAddress"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -202,7 +202,7 @@
                 android:background="#aaaaaa" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/GoodsDetailsTransportTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"

@@ -19,16 +19,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
-<<<<<<< HEAD
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import cn.pedant.SweetAlert.SweetAlertDialog;
 
 import com.BJ.javabean.AddTeamBack;
-=======
-import android.widget.TextView;
-
->>>>>>> refs/remotes/origin/zzy
 import com.BJ.javabean.Group_ReadAllUser;
 import com.BJ.javabean.Group_User;
 import com.BJ.javabean.Loginback;
@@ -59,10 +54,7 @@ public class AddTeamFriendsActivity extends Activity implements OnClickListener,
 	private List<Group_User> Group_UserList=new ArrayList<Group_User>();
 	private Interface addTeamFriendsInterface;
 	private Interface instance;
-<<<<<<< HEAD
 	private RelativeLayout mAddTeamFriendsNoShow;
-=======
->>>>>>> refs/remotes/origin/zzy
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -120,15 +112,11 @@ public class AddTeamFriendsActivity extends Activity implements OnClickListener,
 			@Override
 			public void success(String A) {
 				Log.e("AddTeamFriendsActivity", "返回结果===="+A);
-<<<<<<< HEAD
 				AddTeamBack addTeamBack=GsonUtils.parseJson(A, AddTeamBack.class);
 				Integer status=addTeamBack.getStatusMsg();
 				if(1==status){
 					SlidingActivity.readGroupMember.ReadGroupMember();
 				}
-=======
-//				SlidingActivity.readGroupMember.ReadGroupMember();
->>>>>>> refs/remotes/origin/zzy
 			}
 			
 			@Override
@@ -138,7 +126,6 @@ public class AddTeamFriendsActivity extends Activity implements OnClickListener,
 		});
 	}
 
-<<<<<<< HEAD
 	private void Dialog() {
 		final SweetAlertDialog sd = new SweetAlertDialog(AddTeamFriendsActivity.this);
 		sd.setTitleText("提示");
@@ -165,9 +152,6 @@ public class AddTeamFriendsActivity extends Activity implements OnClickListener,
 	
 	private void initUI() {
 		mAddTeamFriendsNoShow = (RelativeLayout) findViewById(R.id.AddTeamFriendsNoShow);
-=======
-	private void initUI() {
->>>>>>> refs/remotes/origin/zzy
 		findViewById(R.id.AddTeamFriendsBack).setOnClickListener(this);//返回
 		findViewById(R.id.AddTeamFriendsOK).setOnClickListener(this);//完成
 		mAddTeamFriendsListView = (ListView) findViewById(R.id.AddTeamFriendsListView);
@@ -246,12 +230,8 @@ public class AddTeamFriendsActivity extends Activity implements OnClickListener,
 			AddTeamFriendsBack();
 			break;
 		case R.id.AddTeamFriendsOK:
-<<<<<<< HEAD
 			mAddTeamFriendsNoShow.setVisibility(View.GONE);
 			Dialog();
-=======
-			AddTeamFriendsOK();
->>>>>>> refs/remotes/origin/zzy
 			break;
 		default:
 			break;

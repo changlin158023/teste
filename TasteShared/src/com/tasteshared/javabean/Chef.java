@@ -1,10 +1,12 @@
 package com.tasteshared.javabean;
 
+import java.io.Serializable;
+
 import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
 @Table(name = "t_chef")
-public class Chef {
+public class Chef implements Serializable {
 
 	@Column
 	private Integer pk_chef;
