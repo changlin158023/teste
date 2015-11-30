@@ -4,7 +4,7 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
 @Table(name = "t_order")
-public class Order {
+public class DishDetailsBackMessage {
 
 	@Column
 	private Integer pk_order;
@@ -32,6 +32,16 @@ public class Order {
 	private String remark;
 	@Column
 	private Integer enable;
+	@Column
+	private String pk_address;
+	@Column
+	private String contacts;
+	@Column
+	private String phone;
+	@Column
+	private String address;
+	@Column
+	private Integer zipcode;
 	public Integer getPk_order() {
 		return pk_order;
 	}
@@ -98,10 +108,10 @@ public class Order {
 	public void setProcess(Integer process) {
 		this.process = process;
 	}
-	public String getremark() {
+	public String getRemark() {
 		return remark;
 	}
-	public void setremark(String remark) {
+	public void setRemark(String remark) {
 		this.remark = remark;
 	}
 	public Integer getEnable() {
@@ -110,6 +120,35 @@ public class Order {
 	public void setEnable(Integer enable) {
 		this.enable = enable;
 	}
-	
+	public String getPk_address() {
+		return pk_address;
+	}
+	public void setPk_address(String pk_address) {
+		this.pk_address = pk_address;
+	}
+	public String getContacts() {
+		return contacts;
+	}
+	public void setContacts(String contacts) {
+		this.contacts = contacts;
+	}
+	public String getPhone() {
+		return phone;
+	}
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public Integer getZipcode() {
+		return zipcode;
+	}
+	public void setZipcode(Integer zipcode) {
+		this.zipcode = zipcode;
+	}
 	
 }

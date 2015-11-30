@@ -6,7 +6,7 @@ import com.activeandroid.annotation.Column;
 import com.activeandroid.annotation.Table;
 
 @Table(name = "t_dish")
-public class DishBackMessage implements Serializable{
+public class DishBackMessage implements Serializable {
 
 	@Column
 	private Integer pk_dish;
@@ -26,6 +26,12 @@ public class DishBackMessage implements Serializable{
 	private Integer fk_chef;
 	@Column
 	private Integer enable;
+	@Column
+	private Integer unOrders;
+	@Column
+	private Integer needToMake;
+	@Column
+	private Integer waitForDelivery;
 
 	public Integer getPk_dish() {
 		return pk_dish;
@@ -97,6 +103,30 @@ public class DishBackMessage implements Serializable{
 
 	public void setEnable(Integer enable) {
 		this.enable = enable;
+	}
+
+	public Integer getunOrders() {
+		return unOrders;
+	}
+
+	public void setunOrders(Integer unOrders) {
+		this.unOrders = unOrders;
+	}
+
+	public Integer getneedToMake() {
+		return needToMake;
+	}
+
+	public void setneedToMake(Integer needToMake) {
+		this.needToMake = needToMake;
+	}
+
+	public Integer getwaitForDelivery() {
+		return waitForDelivery;
+	}
+
+	public void setwaitForDelivery(Integer waitForDelivery) {
+		this.waitForDelivery = waitForDelivery;
 	}
 
 }

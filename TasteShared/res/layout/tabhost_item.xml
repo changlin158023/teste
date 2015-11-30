@@ -31,7 +31,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:text="订单"
-                android:layout_marginTop="10.0dp"
                 android:textColor="@drawable/tab_textcolor_selector"
                 android:textSize="11.0sp" />
 

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TasteShared</string>
+    <string name="app_name">味道共享</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">味道共享</string>
     <string name="title_activity_goods_details">GoodsDetailsActivity</string>
     <string name="title_activity_registered">RegisteredActivity</string>
     <string name="title_activity_enter">EnterActivity</string>

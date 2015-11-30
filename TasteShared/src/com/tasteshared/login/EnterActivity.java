@@ -1,10 +1,19 @@
 package com.tasteshared.login;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.StreamCorruptedException;
 import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
@@ -24,6 +33,7 @@ import com.tasteshared.R;
 import com.tasteshared.TheParameter;
 import com.tasteshared.fragment.GoodsFragment;
 import com.tasteshared.javabean.Chef;
+import com.tasteshared.Utils.Person;
 import com.tasteshared.back.EnterBack;
 
 public class EnterActivity extends Activity implements OnClickListener{
@@ -35,6 +45,19 @@ public class EnterActivity extends Activity implements OnClickListener{
 	private EditText mEnterEditCode;
 	private EditText mEnterEditPassword;
 	private Interface mEnterInterface;
+	
+	private String fileName = getSDPath() + "/" + "saveData";
+	public String getSDPath() {
+		File sdDir = null;
+		boolean sdCardExist = Environment.getExternalStorageState().equals(
+				android.os.Environment.MEDIA_MOUNTED);
+		// 判断sd卡是否存在
+		if (sdCardExist) {
+			sdDir = Environment.getExternalStorageDirectory();// 获取跟目录
+		}
+		return sdDir.toString();
+
+	}
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +66,35 @@ public class EnterActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.activity_enter);
 		initUI();
 		initInterface();
+		initLogin();
+	}
+
+	private void initLogin() {
+		FileInputStream fis;
+		try {
+			fis = new FileInputStream(fileName);
+			ObjectInputStream ois = new ObjectInputStream(fis);
+			Person person = (Person) ois.readObject();
+			String chefId = person.chefId;
+			String password=person.password;
+			Log.e("EnterActivity", "chefId==="+chefId);
+			Log.e("EnterActivity", "password==="+password);
+			if(!("".equals(chefId)&"".equals(password))){
+				Chef chef=new Chef();
+				chef.setPhone(chefId);
+				chef.setPassword(password);
+				mEnterInterface.chefLogin(EnterActivity.this, chef);
+			}
+			ois.close();
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (StreamCorruptedException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		}
 	}
 
 	private void initInterface() {
@@ -59,10 +111,24 @@ public class EnterActivity extends Activity implements OnClickListener{
 					List<Chef> cheflist=enterBack.getReturnData();
 					Chef chef=cheflist.get(0);
 					TheParameter.setChef(chef);
+					String chefId=chef.getPhone();
+					String chefPassword=chef.getPassword();
 					Intent intent=new Intent(EnterActivity.this, MainActivity.class);
 					startActivity(intent);
 					overridePendingTransition(R.anim.in_item, R.anim.out_item);
 					finish();
+					
+					Person person = new Person(chefId,chefPassword);
+					try {
+						ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName));
+						oos.writeObject(person);
+						oos.close();
+					} catch (FileNotFoundException e) {
+						e.printStackTrace();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					
 				}else {
 					//自定义Toast
 					View toastRoot = getLayoutInflater().inflate(R.layout.my_error_toast, null);

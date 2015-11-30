@@ -2,27 +2,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".GoodsDetailsActivity" >
 
     <RelativeLayout
         android:id="@+id/relativeLayout1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/GoodsDetailsChoose"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" >
 
         <RelativeLayout
             android:id="@+id/GoodsDetailsNumbers"
             android:layout_width="80.0dp"
-            android:layout_height="86.0dp"
+            android:layout_height="44.0dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
-            android:layout_margin="5.0dp"
+            android:layout_marginLeft="5.0dp"
+            android:layout_marginRight="5.0dp"
+            android:layout_marginTop="5.0dp"
             android:background="#efefef" >
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/GoodsDetailsNumbersText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerHorizontal="true"
@@ -33,258 +35,56 @@
                 android:textSize="30.0sp" />
         </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="match_parent"
-            android:layout_height="0.50dp"
-            android:layout_alignParentBottom="true"
-            android:background="#aaaaaa"
-            android:textColor="#535353"
-            android:textSize="15.0sp" />
-
         <RelativeLayout
-            android:id="@+id/GoodsDetailsCustomerAddress"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true" >
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout3"
+            android:id="@+id/GoodsDetailsLayout"
             android:layout_width="match_parent"
             android:layout_height="44.0dp"
+            android:layout_alignBottom="@+id/GoodsDetailsNumbers"
             android:layout_alignParentLeft="true"
             android:layout_alignTop="@+id/GoodsDetailsNumbers"
             android:layout_toLeftOf="@+id/GoodsDetailsNumbers" >
-
             <TextView
                 android:id="@+id/textView7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20.0dp"
-                android:layout_marginTop="10.0dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="35.0dp"
                 android:text="订单详情"
                 android:textColor="#000000"
                 android:textSize="20.0sp" />
 
             <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="0.50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20.0dp"
-                android:background="#aaaaaa" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="44.0dp"
-            android:layout_below="@+id/relativeLayout3"
-            android:layout_toLeftOf="@+id/GoodsDetailsNumbers" >
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="0.50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20.0dp"
-                android:background="#aaaaaa" />
-
-            <TextView
-                android:id="@+id/GoodsDetailsUserName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/GoodsDetailsBack"
+                android:layout_width="65.0dp"
+                android:layout_height="match_parent"
                 android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20.0dp"
-                android:gravity="left|center"
-                android:text="联系人: 王先生"
-                android:textColor="#808080"
-                android:textSize="15.0sp" />
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="返回"
+                android:textColor="#959595"
+                android:textSize="13.0sp" />
         </RelativeLayout>
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout4"
-            android:layout_width="match_parent"
-            android:layout_height="44.0dp"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/relativeLayout2" >
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="0.50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20.0dp"
-                android:background="#aaaaaa" />
-
-            <TextView
-                android:id="@+id/GoodsDetailsUserPhone"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20.0dp"
-                android:gravity="left|center"
-                android:text="联系电话: 18059866229"
-                android:textColor="#808080"
-                android:textSize="15.0sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="44.0dp"
-            android:layout_below="@+id/relativeLayout4"
-            android:layout_centerHorizontal="true" >
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="0.50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20.0dp"
-                android:background="#aaaaaa" />
-
-            <TextView
-                android:id="@+id/GoodsDetailsUserAddress"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20.0dp"
-                android:gravity="left|center"
-                android:text="收货地址:大唐.五缘YOHOC楼2214"
-                android:textColor="#808080"
-                android:textSize="15.0sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout6"
-            android:layout_width="match_parent"
-            android:layout_height="44.0dp"
-            android:layout_below="@+id/relativeLayout5"
-            android:layout_centerHorizontal="true" >
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="0.50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20.0dp"
-                android:background="#aaaaaa" />
-
-            <TextView
-                android:id="@+id/textView14"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20.0dp"
-                android:text="支付方式:在线支付"
-                android:textColor="#808080"
-                android:textSize="15.0sp" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="44.0dp"
-            android:layout_below="@+id/relativeLayout6"
-            android:layout_centerHorizontal="true" >
-
-            <TextView
-                android:id="@+id/textView15"
-                android:layout_width="match_parent"
-                android:layout_height="0.50dp"
-                android:layout_alignParentBottom="true"
-                android:layout_marginLeft="20.0dp"
-                android:background="#aaaaaa" />
-
-            <TextView
-                android:id="@+id/GoodsDetailsTransportTime"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="20.0dp"
-                android:text="送达时间: 2015-11-26  11:33"
-                android:textColor="#808080"
-                android:textSize="15.0sp" />
-        </RelativeLayout>
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/GoodsDetailsChoose"
-        android:layout_width="match_parent"
-        android:layout_height="50.0dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true" >
-
-        <LinearLayout
-            android:id="@+id/GoodsDetailsChooseWay"
+        <ListView
+            android:id="@+id/GoodsDetailsListView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true" >
+            android:layout_below="@+id/textView1"
+            android:layout_centerHorizontal="true" >
 
-            <RelativeLayout
-                android:layout_width="50.0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.9" >
+        </ListView>
 
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:text="确认接单"
-                    android:textColor="#88d4cc"
-                    android:textSize="15.0sp" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0.50dp"
-                android:layout_height="match_parent"
-                android:background="#aaaaaa" >
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1" >
-
-                <TextView
-                    android:id="@+id/textView9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:layout_centerVertical="true"
-                    android:text="取消"
-                    android:textColor="#535353"
-                    android:textSize="15.0sp" />
-            </RelativeLayout>
-        </LinearLayout>
-
-        <RelativeLayout
-            android:id="@+id/GoodsDetailsComplete"
+        <TextView
+            android:id="@+id/textView1"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0.50dp"
+            android:layout_below="@+id/GoodsDetailsLayout"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:visibility="gone" >
+            android:background="#aaaaaa"
+            android:layout_marginTop="5.0dp"
+             />
 
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:text="完成制作"
-                android:textColor="#88d4cc"
-                android:textSize="20.0sp" />
-        </RelativeLayout>
     </RelativeLayout>
 
 </RelativeLayout>

@@ -1,6 +1,8 @@
 package com.tasteshared;
 
 
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTabHost;
@@ -17,7 +19,7 @@ public class MainActivity extends FragmentActivity {
 
 	private FragmentTabHost mTabhost;
 	private int tab_imagelist[] = new int[] { R.drawable.tab_tag_selector,
-			R.drawable.tab_tag_selector};
+			R.drawable.tab_setting_selector};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -44,4 +46,14 @@ public class MainActivity extends FragmentActivity {
 		mTabhost.addTab(tabSpec.setIndicator(view), class1, null);
 	}
 
+	@Override
+	protected void onStop() {
+		super.onStop();
+		//回收掉订单选择后返回的sp
+		SharedPreferences ChooseWay_sp=getSharedPreferences(IConstant.ChooseWayBack, 0);
+		Editor ChooseWay_editor=ChooseWay_sp.edit();
+		ChooseWay_editor.putBoolean(IConstant.IsChooseWayBack, false);
+		ChooseWay_editor.commit();
+	}
+	
 }

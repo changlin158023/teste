@@ -15,11 +15,14 @@ import com.tasteshared.javabean.Chef;
 import com.tasteshared.javabean.DishBackMessage;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -38,6 +41,7 @@ public class GoodsFragment extends Fragment {
 	private ListView mGoodsListView;
 	private Interface mGoodsInterface;
 	private List<DishBackMessage> DishList=new ArrayList<DishBackMessage>();
+	private MyGoodsAdapter adapter;
 
 	public GoodsFragment() {
 	}
@@ -54,6 +58,18 @@ public class GoodsFragment extends Fragment {
 		return mLayout;
 	}
 
+	@Override
+	public void onStart() {
+		super.onStart();
+		Log.e("GoodsFragment", "进入了onStart===");
+		SharedPreferences ChooseWay_sp=getActivity().getSharedPreferences(IConstant.ChooseWayBack, 0);
+		boolean IsChooseWayBack=ChooseWay_sp.getBoolean(IConstant.IsChooseWayBack, false);
+		if(IsChooseWayBack){
+			initChefDish();//读取厨师会做的菜品
+			Log.e("GoodsFragment", "进入了IsChooseWayBack为true的地方===");
+		}
+	}
+	
 	private void initChefDish() {
 		Chef chef=TheParameter.getChef();
 		mGoodsInterface.dishing(getActivity(), chef);
@@ -76,6 +92,7 @@ public class GoodsFragment extends Fragment {
 						DishBackMessage backMessage=DishBackMessagesList.get(i);
 						DishList.add(backMessage);
 					}
+					adapter.notifyDataSetChanged();
 				}
 			}
 			
@@ -88,8 +105,6 @@ public class GoodsFragment extends Fragment {
 
 	private void initUI() {
 		mGoodsListView = (ListView) mLayout.findViewById(R.id.GoodsListView);
-		MyGoodsAdapter adapter=new MyGoodsAdapter();
-		mGoodsListView.setAdapter(adapter);
 		mGoodsListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -102,6 +117,8 @@ public class GoodsFragment extends Fragment {
 				getActivity().overridePendingTransition(R.anim.in_item, R.anim.out_item);
 			}
 		});
+		adapter = new MyGoodsAdapter();
+		mGoodsListView.setAdapter(adapter);
 	}
 
 	class ViewHolder{
@@ -150,7 +167,20 @@ public class GoodsFragment extends Fragment {
 			
 			DishBackMessage backMessage=DishList.get(position);
 			holder.GoodsName.setText(backMessage.getName());
+			holder.GoodsNumbers.setText(backMessage.getunOrders()+" 份未接单");
+			Log.e("GoodsFragment", "未接单的份数==="+backMessage.getunOrders());
+			holder.GoodsHasCompletedNumbers.setText(backMessage.getwaitForDelivery()+" 等待发货");
+			Log.e("GoodsFragment", "等待发货的份数==="+backMessage.getunOrders());
+			holder.GoodsUnfinishedNumbers.setText(backMessage.getneedToMake()+" 份未制作");
+			Log.e("GoodsFragment", "未制作的份数==="+backMessage.getunOrders());
 			
+			holder.GoodsComplete.setOnClickListener(new OnClickListener() {
+				
+				@Override
+				public void onClick(View v) {
+					
+				}
+			});
 			return inflater;
 		}
 		
